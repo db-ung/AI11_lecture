@@ -1,0 +1,84 @@
+ㅇ8단원
+
+ㅁTryParse, Parse
+ㅁref, 
+ㅁout - 함수 바깥에 있는 대입함수를 쓰고싶다 이럴때
+
+ㅁ구조체 class
+복사 형식이 다른거
+student = a new student ();
+a.age =50
+student b = a;
+b. age = 10;
+만약 구조체라면 복사 방식의 차이가 있다.
+
+ㅇ9단원
+
+ㅁ인터페이스 - 규칙, 규약 
+	클래스에 규칙부여, 가이드라인
+ex) void emergencyStop(); 이런걸 구현해야돼
+
+추상클래스와 인터페이스 차이점
+c++의 경우에는 하나 이상의 클래스를 상속 받을수있다.
+Java, c#은 다중상속을 허용하지 않음
+즉 하나만 상속 받을수있음
+
+결론: 인터페이스는 다중 상속을 지원한다.
+즉 하나의 클래스에 한 가지 "이상"의 규칙을 부여할 수 있다.
+즉 여러 개의 규칙 부여 가능함
+
+ 
+
+ㅁTostring(); :: 
+(Object 모든 클래스의 부모)
+virtual 나를 상속받으면 모두 쓸수있어
+
+Sort :: int로만 된 List 오름차순 정렬 가능
+Product로 된 List는 정렬 기준을 모름 
+
+ㅁ버블정렬
+
+virtual - 오버라이딩 안해도 되지만 해도된다
+
+1.인터페이스도 상속이 가능하다(추상클래스도 상속이된다)
+2.인터페이스에서도 추상클래스처럼
+	-ex)public int Age{get;set;} 추가 가능함
+
+라디오 박스
+
+체크박스
+
+ㅇ10단원
+ㅁ예외처리
+  실행은 되는데 갑자기 꺼지는 에러
+
+ㅁtry - catch - finally 문법 
+  코드가 튕기지 않게 해준다
+  보통 try - catch를 쓰고
+  DB 연동시 try - catch - finally를 사용
+
+-ex)
+
+try
+{
+
+int number = int.Parse(textBox2.Text);
+number++;
+MessageBox.Show("number가 1이 증가한 값:" + number);
+}
+
+//코드가 튕기지 않는다
+catch(Exception ex) 
+{
+    MessageBox.Show(ex.Message);    //오류 원인
+    MessageBox.Show(ex.StackTrace); //오류 위치
+	return; //여기까지하고 강제 종료
+}
+finally
+{
+    MessageBox.Show("이건 실행하고 꺼야지");
+}
+MessageBox.Show("클릭 완료");
+
+
+데이터 그리드 뷰
