@@ -1,0 +1,41 @@
+ㅇ11단원
+ㅁ람다 :: 
+-델리게이트를 짧게 줄인거
+ㅁ델리게이터(대리자) :: 일종의 클래스 선언
+ -사용자 정의 자료형
+ex)
+-Sort.
+- 매개변수에 매소드가 들어갈수이따.
+-(매개변수가 2개이고 반환형이 int인 함수) :: 콜백함수
+-콜백함수 :: 매개변수로 매서드가 들어가는 함수
+
+ㅁThread
+-프로그램은 여러개의 프로세서로 구성되어있다.
+-프로세서가 여러개의 Thread로 구성되어있다
+Thread 2개이상 => 멀티 Thread
+-순차적 출력이 아닌 시간을 분배하여 각각 조금씩 실행한다
+-형태
+ Thread t1 = new Thread(printA);
+ Thread t2 = new Thread(() =>
+ {
+     for (int i = 0; i < 100; i++) 
+     Console.Write('B');
+ }
+ );
+ Thread t3 = new Thread(delegate()
+ {
+     {    
+         for (int i = 0; i < 100; i++)
+         Console.Write('C');
+     }
+ 
+ });
+
+ㅇ12단원
+Linq
+기본형태 ppt참고
+단점
+::한줄이 너무길다
+
+응용
+XML
